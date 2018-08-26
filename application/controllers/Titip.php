@@ -41,20 +41,19 @@ class Titip extends CI_Controller {
 
 		// olah data, ada qrcode juga di sini
 
-		$id = $data_user[0]->id;
-		$foto_penitip = $data_user[0]->foto_penitip;
-		$foto_barang_titipan = $data_user[0]->foto_barang_titipan;
-		$foto_ktp_asli = $data_user[0]->foto_ktp_asli;
-		$isi_kode_ktp_asli = $data_user[0]->isi_kode_ktp_asli;
-		$username = $data_user[0]->username;
-		$nomor_antrian = $data_user[0]->nomor_antrian;
+		$id = $data_titip[0]->id;
+		$foto_penitip = $data_titip[0]->foto_penitip;
+		$foto_barang_titipan = $data_titip[0]->foto_barang_titipan;
+		$foto_ktp_asli = $data_titip[0]->foto_ktp_asli;
+		$isi_kode_ktp_asli = $data_titip[0]->isi_kode_ktp_asli;
+		$username = $data_titip[0]->username;
 
 		// permainan verifikasi?
 
 		$verifikasi = $data_user[0]->verifikasi;
 
 		if ($nomor_antrian == 0 && $verifikasi == 'iya'){
-			redirect(base_url().'index.php/user/masuk_antrian');
+			redirect(base_url().'index.php/titip/masuk_antrian');
 		}
 		$sisa = '';
 		if ($nomor_antrian >= $sekarang){
@@ -66,28 +65,32 @@ class Titip extends CI_Controller {
 		// giliran masukkan data
 
 		$data = array(
-			'sekarang' => $sekarang,
+			'foto_penitip' => $foto_penitip,
+			'foto_barang_titipan' => $foto_barang_titipan,
+			'foto_ktp_asli' => $foto_ktp_asli,
+			'isi_kode_ktp_asli' => $isi_kode_ktp_asli,
+			'username' => $username,
 			'nomor_antrian' => $nomor_antrian,
-			'sisa' => $sisa,
-			'nama_alias' => $nama_alias,
-			'ktp_alias' => $ktp_alias,
-			'foto_diri' => $foto_diri,
-			'pengikut_nama' => $pengikut_nama,
-			'pengikut_ktp' => $pengikut_ktp,
-			'pengikut_foto_diri' => $pengikut_foto_diri,
-			'pengikut_foto_ktp' => $pengikut_foto_ktp,
-			'jenis_besuk' => $jenis_besuk,
-			'qrcode' => $qrcode,
-			'surat_besukan' => $surat_besukan,
 			'verifikasi' => $verifikasi
 		);
 
 		// $this->load->view('tampil_antrian.php', $data);
 		$this->load->view('layout/default', array(
 			'judul' => 'Tampil Antrian',
-			'isi' => 'tampil_antrian',
+			'isi' => 'titip/tampil_antrian',
 			'isi_parameter' => $data
 		));
+	}
+
+	// main ajax untuk tampil antrian
+
+	public function antrian_sekarang(){
+		$data_antrian = $this->user_database->tampil_data('antrian_titip');
+		$sekarang = $data_antrian[0]->nomor_antrian;
+		$data = array(
+			'tertinggi' => $sekarang
+		);
+		$this->load->view('titip/data_tertinggi', $data);
 	}
 
 }

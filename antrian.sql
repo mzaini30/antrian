@@ -126,6 +126,7 @@ CREATE TABLE `titip` (
   `isi_kode_ktp_asli` varchar(200) NOT NULL,
   `username` varchar(200) NOT NULL,
   `nomor_antrian` int(50) NOT NULL,
+  `verifikasi` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -198,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-26 17:05:57
+-- Dump completed on 2018-08-26 18:18:52
