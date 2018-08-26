@@ -14,6 +14,7 @@
 	<a href="<?= base_url() ?>index.php/berita/tidak_boleh_dibawa" class="btn btn-danger">Barang-barang yang Tidak Boleh Dibawa</a>
 	<a href="<?= base_url() ?>index.php/berita/alur_besukan_online" class="btn btn-default">Alur Besukan Online</a>
 	<a href="<?= base_url() ?>index.php/berita/alur_besukan_offline" class="btn btn-default">Alur Besukan Offline (Pakai Kartu)</a>
+	<a href="<?= base_url() ?>index.php/berita/tidak_boleh_dititip" class="btn btn-default">Barang-barang yang Tidak Boleh Dititip</a>
 	<?php
 		$this->load->view('elemen/tombol_logout');
 	?>

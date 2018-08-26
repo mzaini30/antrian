@@ -35,4 +35,8 @@ class Berita extends CI_Controller {
 		tampil('Alur Besukan Offline (Pakai Kartu)', 'alur_besukan_offline');
 	}
 
+	public function tidak_boleh_dititip(){
+		tampil('Barang-barang yang Tidak Boleh Dititip', 'tidak_boleh_dititip');
+	}
+
 }
