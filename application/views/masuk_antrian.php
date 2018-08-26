@@ -8,7 +8,7 @@
 		<a href="<?= base_url() ?>index.php/user/ambil_nomor_antrian/besuk_napi" class="btn btn-default">Antrian Besuk Napi</a>
 	</p>
 	<p>
-		<a href="#!" class="btn btn-default">Titipan Online</a>
+		<a href="<?= base_url() ?>index.php/titip" class="btn btn-default">Titipan Online</a>
 	</p>
 	<hr>
 	<a href="<?= base_url() ?>index.php/berita/tidak_boleh_dibawa" class="btn btn-danger">Barang-barang yang Tidak Boleh Dibawa</a>
