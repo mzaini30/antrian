@@ -353,9 +353,9 @@ class Titip extends CI_Controller {
         $config['imagedir']     = './gambar/cache/'; //direktori penyimpanan qr code
         $this->ciqrcode->initialize($config);
         
-        $nama_qrcode = $username.'_booking.png'; //buat name dari qr code sesuai dengan username
+        $nama_qrcode = $username.'_booking_titip.png'; //buat name dari qr code sesuai dengan username
         
-        $params['data'] = base_url().'index.php/qr/a/'.$username; //data yang akan di jadikan QR CODE
+        $params['data'] = base_url().'index.php/qr/a_titip/'.$username; //data yang akan di jadikan QR CODE
         $params['level'] = 'H'; //H=High
         $params['size'] = 10;
         $params['savename'] = FCPATH.$config['imagedir'].$nama_qrcode; //simpan image QR CODE ke folder assets/images/
@@ -364,23 +364,41 @@ class Titip extends CI_Controller {
 		// masukkan database
 
         $data = array(
-        	'nama_alias' => $nama_alias,
-        	'ktp_alias' => $ktp_alias,
-        	'nama_dibesuk' => $nama_dibesuk,
-			// 'foto_diri' => $foto_diri, // foto diri tiba-tiba hilang weh
-        	'pengikut_nama' => $pengikut_nama,
-        	'pengikut_ktp' => $pengikut_ktp,
-        	'surat_besukan' => $surat_besukan,
-        	'pengikut_foto_diri' => $pengikut_foto_diri,
-        	'pengikut_foto_ktp' => $pengikut_foto_ktp,
-        	'jenis_besuk' => $jenis_besuk,
-        	// 'nomor_antrian' => $nomor_antrian,
-        	'qrcode' => $nama_qrcode,
-        	'waktu' => $waktu,
-        	'verifikasi' => $verifikasi
+
+        	// data lama
+
+   //      	'nama_alias' => $nama_alias,
+   //      	'ktp_alias' => $ktp_alias,
+   //      	'nama_dibesuk' => $nama_dibesuk,
+			// // 'foto_diri' => $foto_diri, // foto diri tiba-tiba hilang weh
+   //      	'pengikut_nama' => $pengikut_nama,
+   //      	'pengikut_ktp' => $pengikut_ktp,
+   //      	'surat_besukan' => $surat_besukan,
+   //      	'pengikut_foto_diri' => $pengikut_foto_diri,
+   //      	'pengikut_foto_ktp' => $pengikut_foto_ktp,
+   //      	'jenis_besuk' => $jenis_besuk,
+   //      	// 'nomor_antrian' => $nomor_antrian,
+   //      	'qrcode' => $nama_qrcode,
+   //      	'waktu' => $waktu,
+   //      	'verifikasi' => $verifikasi
+
+        	// data baru
+
+        	// 'id' => $id,
+			'foto_penitip' => $foto_penitip,
+			'foto_barang_titipan' => $foto_barang_titipan,
+			'foto_ktp_asli' => $foto_ktp_asli,
+			'isi_kode_ktp_asli' => $isi_kode_ktp_asli,
+			// 'username' => $username,
+			'nomor_antrian' => $nomor_antrian,
+			'verifikasi' => $verifikasi,
+			// 'verifikasi_reload' => $verifikasi_reload,
+			'waktu' => $waktu,
+			'qrcode' => $qrcode
+
         );
-        $this->user_database->edit_data('user', $data, array('username' => $username));
-        redirect(base_url().'index.php/user/tampil_antrian');
+        $this->user_database->edit_data('titip', $data, array('username' => $username));
+        redirect(base_url().'index.php/titip/tampil_antrian');
     }	
 
 }
