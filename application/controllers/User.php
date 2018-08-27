@@ -18,9 +18,9 @@ class User extends CI_Controller {
 			$ci =& get_instance();
 
 			$ci->load->view('layout/default', array(
-				'judul' => $judul,
-				'isi' => $isi,
-				'isi_parameter' => $parameter
+				'judul'	=>	$judul,
+				'isi'	=>	$isi,
+				'isi_parameter'	=>	$parameter
 			));	
 		}
 	}
