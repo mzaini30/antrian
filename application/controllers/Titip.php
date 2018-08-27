@@ -307,33 +307,45 @@ class Titip extends CI_Controller {
 
 		// main upload gambar
 
+		// $foto_penitip = '';
+		// $foto_barang_titipan = '';
+		// $foto_ktp_asli = '';
+
 		$this->upload->initialize(array(
-			'upload_path' => './gambar/surat_besukan',
+			'upload_path' => './gambar/foto_penitip',
 			'allowed_types' => 'gif|jpg|png',
 			'encrypt_name' => TRUE
 		));
-		if ($this->upload->do_upload('surat_besukan')){
-			$surat_besukan = $this->upload->data()['file_name'];
+		if ($this->upload->do_upload('foto_penitip')){
+			$foto_penitip = $this->upload->data()['file_name'];
 		}
 
 		// upload gambar pengikut
 
-		$this->upload->initialize(array(
-			'upload_path' => './gambar/pengikut/foto_diri',
-			'allowed_types' => 'gif|jpg|png',
-			'encrypt_name' => TRUE
-		));
-		if ($this->upload->do_upload('pengikut_foto_diri')){
-			$pengikut_foto_diri = $this->upload->data()['file_name'];
-		}
+		// $foto_penitip = '';
+		// $foto_barang_titipan = '';
+		// $foto_ktp_asli = '';
 
 		$this->upload->initialize(array(
-			'upload_path' => './gambar/pengikut/foto_ktp',
+			'upload_path' => './gambar/pengikut/foto_barang_titipan',
 			'allowed_types' => 'gif|jpg|png',
 			'encrypt_name' => TRUE
 		));
-		if ($this->upload->do_upload('pengikut_foto_ktp')){
-			$pengikut_foto_ktp = $this->upload->data()['file_name'];
+		if ($this->upload->do_upload('foto_barang_titipan')){
+			$foto_barang_titipan = $this->upload->data()['file_name'];
+		}
+
+		// $foto_penitip = '';
+		// $foto_barang_titipan = '';
+		// $foto_ktp_asli = '';
+
+		$this->upload->initialize(array(
+			'upload_path' => './gambar/pengikut/foto_ktp_asli',
+			'allowed_types' => 'gif|jpg|png',
+			'encrypt_name' => TRUE
+		));
+		if ($this->upload->do_upload('foto_ktp_asli')){
+			$foto_ktp_asli = $this->upload->data()['file_name'];
 		}
 
 		// main qr code (=> booking)
