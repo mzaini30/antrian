@@ -98,7 +98,7 @@ CREATE TABLE `history` (
   `status` varchar(200) NOT NULL,
   `verifikasi` varchar(200) NOT NULL,
   PRIMARY KEY (`id_history`)
-) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,6 +127,9 @@ CREATE TABLE `titip` (
   `username` varchar(200) NOT NULL,
   `nomor_antrian` int(50) NOT NULL,
   `verifikasi` varchar(200) NOT NULL,
+  `verifikasi_reload` varchar(200) NOT NULL,
+  `waktu` varchar(200) NOT NULL,
+  `qrcode` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -199,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-26 18:18:52
+-- Dump completed on 2018-08-27 21:08:06
