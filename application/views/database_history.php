@@ -5,11 +5,9 @@
 			<th>KTP</th>
 			<th>Nama</th>
 			<th>Gender</th>
-			<th>Tempat Lahir</th>
-			<th>Tanggal Lahir</th>
-			<th>Pekerjaan</th>
 			<th>Status</th>
 			<th>Alamat</th>
+			<th>Nomor HP</th>
 			<th>Username</th>
 			<th>Password</th>
 			<th>Nomor Antrian</th>
@@ -37,11 +35,9 @@
 			<td><?= $d->ktp ?></td>
 			<td><?= $d->nama ?></td>
 			<td><?= $d->gender ?></td>
-			<td><?= $d->tempat_lahir ?></td>
-			<td><?= $d->tanggal_lahir ?></td>
-			<td><?= $d->pekerjaan ?></td>
 			<td><?= $d->status ?></td>
 			<td><?= $d->alamat ?></td>
+			<td><?= $d->nomor_hp ?></td>
 			<td><?= $d->username ?></td>
 			<td><?= $d->password ?></td>
 			<td><?= $d->nomor_antrian ?></td>

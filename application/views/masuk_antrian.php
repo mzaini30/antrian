@@ -2,19 +2,19 @@
 <div class="alert alert-warning">Sudah <span class="nomor-antrian-tertinggi"><?= $nomor_antrian_tertinggi ?></span> orang mengambil nomor antrian. Sisa <span class="sisa-nomor-antrian"><?= $sisa_nomor_antrian ?></span> nomor antrian lagi</div>
 <center>
 	<p>
-		<a href="<?= base_url() ?>index.php/user/ambil_nomor_antrian/besuk_tahanan" class="btn btn-default">Antrian Besuk Tahanan</a>
+		<a href="<?= base_url() ?>index.php/user/ambil_nomor_antrian" class="btn btn-default">Ambil Nomor Antrian</a>
 	</p>
-	<p>
+	<!-- <p>
 		<a href="<?= base_url() ?>index.php/user/ambil_nomor_antrian/besuk_napi" class="btn btn-default">Antrian Besuk Napi</a>
-	</p>
+	</p> -->
 <!-- 	<p>
 		<a href="<?= base_url() ?>index.php/titip" class="btn btn-default">Titipan Online</a>
 	</p> -->
 	<hr>
-	<a href="<?= base_url() ?>index.php/berita/tidak_boleh_dibawa" class="btn btn-danger">Barang-barang yang Tidak Boleh Dibawa</a>
-	<a href="<?= base_url() ?>index.php/berita/alur_besukan_online" class="btn btn-default">Alur Besukan Online</a>
-	<a href="<?= base_url() ?>index.php/berita/alur_besukan_offline" class="btn btn-default">Alur Besukan Offline (Pakai Kartu)</a>
-	<a href="<?= base_url() ?>index.php/berita/tidak_boleh_dititip" class="btn btn-default">Barang-barang yang Tidak Boleh Dititip</a>
+	<!-- <a href="<?= base_url() ?>index.php/berita/tidak_boleh_dibawa" class="btn btn-danger">Barang-barang yang Tidak Boleh Dibawa</a> -->
+	<!-- <a href="<?= base_url() ?>index.php/berita/alur_besukan_online" class="btn btn-default">Alur Besukan Online</a> -->
+	<!-- <a href="<?= base_url() ?>index.php/berita/alur_besukan_offline" class="btn btn-default">Alur Besukan Offline (Pakai Kartu)</a> -->
+	<a href="<?= base_url() ?>index.php/berita/tidak_boleh_dititip" class="btn btn-danger">Barang-barang yang Tidak Boleh Dititip</a>
 	<?php
 		$this->load->view('elemen/tombol_logout');
 	?>

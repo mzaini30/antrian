@@ -14,15 +14,6 @@ $belum_verifikasi = 'tidak';
 <div class="alert alert-warning">Silahkan menuju ke Pelayanan dengan membawa semua persyaratan asli</div>
 <?php } ?>
 
-<h1 class="text-center">
-	<?php
-	if ($jenis_besuk == 'besuk_tahanan'){
-		echo 'Besuk Tahanan';
-	} else if ($jenis_besuk == 'besuk_napi'){
-		echo 'Besuk Napi';
-	}
-	?>		
-</h1>
 <hr>
 <table class="table">
 	<tr>
@@ -58,8 +49,25 @@ $belum_verifikasi = 'tidak';
 				<td>KTP</td>
 				<td><?= $ktp_alias ?></td>
 			</tr>
-			<?php if ($pengikut_nama) { ?>
 			<tr>
+				<td>Nomor Hp</td>
+				<td><?= $nomor_hp ?></td>
+			</tr>
+			<tr>
+				<td>Titipan Ini untuk</td>
+				<td><?= $nama_dibesuk ?></td>
+			</tr>
+			<tr>
+				<td>Foto Barang Titipan</td>
+				<!-- <td><?= $foto_barang_titipan ?></td> -->
+				<td>
+					<span class="thumbnail">
+						<img src="<?= base_url() ?>gambar/foto_barang_titipan/<?= $foto_barang_titipan ?>">
+					</span>
+				</td>
+			</tr>
+			<?php if ($pengikut_nama) { ?>
+			<!-- <tr>
 				<td><strong>Pengikut</strong></td>
 				<td></td>
 			</tr>
@@ -70,19 +78,9 @@ $belum_verifikasi = 'tidak';
 			<tr>
 				<td>KTP</td>
 				<td><?= $pengikut_ktp ?></td>
-			</tr>
+			</tr> -->
 			<?php } ?>
 		</table>
-		<?php if ($surat_besukan) { ?>
-		<p>
-			<strong>Surat besukan</strong>
-		</p>
-		<center>
-			<span class="thumbnail">
-				<img src="<?= base_url() ?>gambar/surat_besukan/<?= $surat_besukan ?>">
-			</span>
-		</center>
-		<? } ?>
 		<?php if ($pengikut_nama) { ?>
 	<!-- <table class="table">
 		<tr>
@@ -98,7 +96,7 @@ $belum_verifikasi = 'tidak';
 			</td>
 		</tr>
 	</table> -->
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-sm-6 col-xs-12">
 			<p>
 				<strong>Foto diri pengikut</strong>
@@ -115,7 +113,7 @@ $belum_verifikasi = 'tidak';
 				<img src="<?= base_url() ?>gambar/pengikut/foto_ktp/<?= $pengikut_foto_ktp ?>">
 			</span>
 		</div>
-	</div>
+	</div> -->
 	<?php } ?>
 	<center>
 		<div class="thumbnail" style="max-width: 250px;">

@@ -54,3 +54,11 @@ Nama
 No. KTP 	
 Foto Diri (gunakan format gambar) 	
 Foto KTP (gunakan format gambar) 	
+
+
+
+Yang dihapus
+
+Tempat Lahir (nggak pakai) 	
+Tanggal Lahir (nggak pakai) 	
+Pekerjaan (nggak pakai)

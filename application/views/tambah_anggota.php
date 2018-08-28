@@ -4,7 +4,7 @@
 <form method="post" action="<?= base_url('index.php/login/tambah_anggota_do') ?>" enctype='multipart/form-data'>
 	<table class="table">
 		<tr>
-			<td>No. KTP</td>
+			<td>Nomor KTP</td>
 			<td>
 				<input type="number" name="ktp" class="form-control" placeholder="Contoh: 123456" required>
 			</td>
@@ -25,24 +25,6 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Tempat Lahir (nggak pakai)</td>
-			<td>
-				<input type="text" name="tempat_lahir" class="form-control" placeholder="Contoh: Samarinda" required>
-			</td>
-		</tr>
-		<tr>
-			<td>Tanggal Lahir (nggak pakai)</td>
-			<td>
-				<input type="date" name="tanggal_lahir" class="form-control"  required>
-			</td>
-		</tr>
-		<tr>
-			<td>Pekerjaan (nggak pakai)</td>
-			<td>
-				<input type="text" name="pekerjaan" class="form-control" placeholder="Contoh: Wiraswasta" required>
-			</td>
-		</tr>
-		<tr>
 			<td>Status (nggak pakai)</td>
 			<td>
 				<select name="status" class="form-control">
@@ -59,6 +41,9 @@
 		</tr>
 		<tr>
 			<td>Nomor HP</td>
+			<td>
+				<input type="number" name="nomor_hp" class="form-control" placeholder="Contoh: 081234567890" required>
+			</td>
 		</tr>
 		<tr>
 			<td>Foto Diri</td>

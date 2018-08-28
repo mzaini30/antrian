@@ -44,12 +44,15 @@ class User extends CI_Controller {
 		$nomor_antrian = $data_user[0]->nomor_antrian;
 		$nama_alias = $data_user[0]->nama_alias;
 		$ktp_alias = $data_user[0]->ktp_alias;
+		$nomor_hp = $data_user[0]->nomor_hp;
 		$foto_diri = $data_user[0]->foto_diri;
+		$nama_dibesuk = $data_user[0]->nama_dibesuk;
+		$foto_barang_titipan = $data_user[0]->foto_barang_titipan;
 		$pengikut_nama = $data_user[0]->pengikut_nama;
 		$pengikut_ktp = $data_user[0]->pengikut_ktp;
 		$pengikut_foto_diri = $data_user[0]->pengikut_foto_diri;
 		$pengikut_foto_ktp = $data_user[0]->pengikut_foto_ktp;
-		$jenis_besuk = $data_user[0]->jenis_besuk;
+		// $jenis_besuk = $data_user[0]->jenis_besuk;
 		$qrcode = $data_user[0]->qrcode;
 		$surat_besukan = $data_user[0]->surat_besukan;
 		$verifikasi = $data_user[0]->verifikasi;
@@ -68,12 +71,15 @@ class User extends CI_Controller {
 			'sisa' => $sisa,
 			'nama_alias' => $nama_alias,
 			'ktp_alias' => $ktp_alias,
+			'nomor_hp' => $nomor_hp,
 			'foto_diri' => $foto_diri,
+			'nama_dibesuk' => $nama_dibesuk,
+			'foto_barang_titipan' => $foto_barang_titipan,
 			'pengikut_nama' => $pengikut_nama,
 			'pengikut_ktp' => $pengikut_ktp,
 			'pengikut_foto_diri' => $pengikut_foto_diri,
 			'pengikut_foto_ktp' => $pengikut_foto_ktp,
-			'jenis_besuk' => $jenis_besuk,
+			// 'jenis_besuk' => $jenis_besuk,
 			'qrcode' => $qrcode,
 			'surat_besukan' => $surat_besukan,
 			'verifikasi' => $verifikasi
@@ -196,7 +202,7 @@ class User extends CI_Controller {
 
 	// ambil nomor antrian
 
-	public function ambil_nomor_antrian($jenis_besuk){
+	public function ambil_nomor_antrian(){
 
 		// cek jamnya dulu baru jalankan yang lain. Kalau jamnya salah, redirect ke blog yang menerangkan jam besuk yang benar
 
@@ -228,7 +234,8 @@ class User extends CI_Controller {
 			'nama' => $data[0]->nama,
 			'ktp' => $data[0]->ktp,
 			'username' => $data[0]->username,
-			'jenis_besuk' => $jenis_besuk
+			'nomor_hp' => $data[0]->nomor_hp
+			// 'jenis_besuk' => $jenis_besuk
 		);
 		$data_tertinggi = $this->user_database->tampil_data('user', 'order by nomor_antrian desc');
 		$nomor_antrian_tertinggi = $data_tertinggi[0]->nomor_antrian;
@@ -249,13 +256,14 @@ class User extends CI_Controller {
 		}
 	}
 
-	public function ambil_nomor_antrian_do($jenis_besuk){
+	public function ambil_nomor_antrian_do(){
 		
 		// ambil data dari input. kalau kosong berarti disiapkan untuk gambar
 
 		$nama_alias = $this->input->post('nama_alias');
 		$ktp_alias = $this->input->post('ktp_alias');
 		$nama_dibesuk = $this->input->post('nama_dibesuk');
+		$foto_barang_titipan = '';
 		$pengikut_nama = $this->input->post('pengikut_nama');
 		$pengikut_ktp = $this->input->post('pengikut_ktp');
 		$surat_besukan = '';
@@ -285,6 +293,17 @@ class User extends CI_Controller {
 		));
 		if ($this->upload->do_upload('surat_besukan')){
 			$surat_besukan = $this->upload->data()['file_name'];
+		}
+
+		// upload foto barang titipan
+
+		$this->upload->initialize(array(
+			'upload_path' => './gambar/foto_barang_titipan',
+			'allowed_types' => 'gif|jpg|png',
+			'encrypt_name' => TRUE
+		));
+		if ($this->upload->do_upload('foto_barang_titipan')){
+			$foto_barang_titipan = $this->upload->data()['file_name'];
 		}
 
 		// upload gambar pengikut
@@ -326,13 +345,14 @@ class User extends CI_Controller {
         	'nama_alias' => $nama_alias,
         	'ktp_alias' => $ktp_alias,
         	'nama_dibesuk' => $nama_dibesuk,
+        	'foto_barang_titipan' => $foto_barang_titipan,
 			// 'foto_diri' => $foto_diri, // foto diri tiba-tiba hilang weh
         	'pengikut_nama' => $pengikut_nama,
         	'pengikut_ktp' => $pengikut_ktp,
         	'surat_besukan' => $surat_besukan,
         	'pengikut_foto_diri' => $pengikut_foto_diri,
         	'pengikut_foto_ktp' => $pengikut_foto_ktp,
-        	'jenis_besuk' => $jenis_besuk,
+        	// 'jenis_besuk' => $jenis_besuk,
         	// 'nomor_antrian' => $nomor_antrian,
         	'qrcode' => $nama_qrcode,
         	'waktu' => $waktu,

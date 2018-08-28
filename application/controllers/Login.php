@@ -64,11 +64,9 @@ class Login extends CI_Controller {
 		$ktp = $this->input->post('ktp');
 		$nama = $this->input->post('nama');
 		$gender = $this->input->post('gender');
-		$tempat_lahir = $this->input->post('tempat_lahir');
-		$tanggal_lahir = $this->input->post('tanggal_lahir');
-		$pekerjaan = $this->input->post('pekerjaan');
 		$status = $this->input->post('status');
 		$alamat = $this->input->post('alamat');
+		$nomor_hp = $this->input->post('nomor_hp');
 		$foto_diri = ''; // mengapa yang ini yang tersimpan di database?
 		$foto_ktp = '';
 		$username = $this->input->post('username');
@@ -96,11 +94,9 @@ class Login extends CI_Controller {
 			'ktp' => $ktp,
 			'nama' => $nama,
 			'gender' => $gender,
-			'tempat_lahir' => $tempat_lahir,
-			'tanggal_lahir' => $tanggal_lahir,
-			'pekerjaan' => $pekerjaan,
 			'status' => $status,
 			'alamat' => $alamat,
+			'nomor_hp' => $nomor_hp,
 			'foto_diri' => $foto_diri,
 			'foto_ktp' => $foto_ktp,
 			'username' => $username,
