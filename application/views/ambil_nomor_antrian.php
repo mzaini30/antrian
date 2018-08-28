@@ -10,10 +10,13 @@
 			</td>
 		</tr>
 		<tr>
-			<td>No. KTP</td>
+			<td>Nomor KTP</td>
 			<td>
 				<input type="number" name="ktp_alias" value="<?= $ktp ?>" required class='form-control'>
 			</td>
+		</tr>
+		<tr>
+			<td>Nomor HP</td>
 		</tr>
 		<?php if ($jenis_besuk == 'besuk_tahanan'){ ?>
 			<tr>
@@ -28,6 +31,12 @@
 			<td>
 				<input type="text" name="nama_dibesuk" required class='form-control'>
 			</td>
+		</tr>
+		<tr>
+			<td>Titipan Ini untuk (gunakan bin)</td>
+		</tr>
+		<tr>
+			<td>Foto Barang Titipan</td>
 		</tr>
 		<tr>
 			<td><strong>Identitas Pengikut</strong> (opsional)</td>

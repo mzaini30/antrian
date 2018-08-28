@@ -25,25 +25,25 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Tempat Lahir</td>
+			<td>Tempat Lahir (nggak pakai)</td>
 			<td>
 				<input type="text" name="tempat_lahir" class="form-control" placeholder="Contoh: Samarinda" required>
 			</td>
 		</tr>
 		<tr>
-			<td>Tanggal Lahir</td>
+			<td>Tanggal Lahir (nggak pakai)</td>
 			<td>
 				<input type="date" name="tanggal_lahir" class="form-control"  required>
 			</td>
 		</tr>
 		<tr>
-			<td>Pekerjaan</td>
+			<td>Pekerjaan (nggak pakai)</td>
 			<td>
 				<input type="text" name="pekerjaan" class="form-control" placeholder="Contoh: Wiraswasta" required>
 			</td>
 		</tr>
 		<tr>
-			<td>Status</td>
+			<td>Status (nggak pakai)</td>
 			<td>
 				<select name="status" class="form-control">
 					<option value="menikah">Menikah</option>
@@ -56,6 +56,9 @@
 			<td>
 				<textarea name="alamat" placeholder="Contoh: Jln. Cipto Mangunkusumo, RT 1, Blok M" class="form-control" required></textarea>
 			</td>
+		</tr>
+		<tr>
+			<td>Nomor HP</td>
 		</tr>
 		<tr>
 			<td>Foto Diri</td>
