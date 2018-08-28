@@ -44,7 +44,7 @@ class User extends CI_Controller {
 		$nomor_antrian = $data_user[0]->nomor_antrian;
 		$nama_alias = $data_user[0]->nama_alias;
 		$ktp_alias = $data_user[0]->ktp_alias;
-		$nomor_hp = $data_user[0]->nomor_hp;
+		$nomor_hp_alias = $data_user[0]->nomor_hp_alias;
 		$foto_diri = $data_user[0]->foto_diri;
 		$nama_dibesuk = $data_user[0]->nama_dibesuk;
 		$foto_barang_titipan = $data_user[0]->foto_barang_titipan;
@@ -71,7 +71,7 @@ class User extends CI_Controller {
 			'sisa' => $sisa,
 			'nama_alias' => $nama_alias,
 			'ktp_alias' => $ktp_alias,
-			'nomor_hp' => $nomor_hp,
+			'nomor_hp_alias' => $nomor_hp_alias,
 			'foto_diri' => $foto_diri,
 			'nama_dibesuk' => $nama_dibesuk,
 			'foto_barang_titipan' => $foto_barang_titipan,
@@ -262,6 +262,7 @@ class User extends CI_Controller {
 
 		$nama_alias = $this->input->post('nama_alias');
 		$ktp_alias = $this->input->post('ktp_alias');
+		$nomor_hp_alias = $this->input->post('nomor_hp_alias');
 		$nama_dibesuk = $this->input->post('nama_dibesuk');
 		$foto_barang_titipan = '';
 		$pengikut_nama = $this->input->post('pengikut_nama');
@@ -344,6 +345,7 @@ class User extends CI_Controller {
         $data = array(
         	'nama_alias' => $nama_alias,
         	'ktp_alias' => $ktp_alias,
+        	'nomor_hp_alias' => $nomor_hp_alias,
         	'nama_dibesuk' => $nama_dibesuk,
         	'foto_barang_titipan' => $foto_barang_titipan,
 			// 'foto_diri' => $foto_diri, // foto diri tiba-tiba hilang weh

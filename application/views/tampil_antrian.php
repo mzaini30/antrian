@@ -11,7 +11,7 @@ $this->load->view('elemen/anti_tabel');
 $belum_verifikasi = 'tidak';
 ?>
 <?php if ($verifikasi == $belum_verifikasi) { ?>
-<div class="alert alert-warning">Silahkan menuju ke Pelayanan dengan membawa semua persyaratan asli</div>
+<div class="alert alert-warning">Silahkan menuju ke petugas P2U dengan menunjukkan kode barcode yang ada di bawah ini</div>
 <?php } ?>
 
 <hr>
@@ -51,7 +51,7 @@ $belum_verifikasi = 'tidak';
 			</tr>
 			<tr>
 				<td>Nomor Hp</td>
-				<td><?= $nomor_hp ?></td>
+				<td><?= $nomor_hp_alias ?></td>
 			</tr>
 			<tr>
 				<td>Titipan Ini untuk</td>

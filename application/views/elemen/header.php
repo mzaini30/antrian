@@ -3,7 +3,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <span class="navbar-brand">
-      	<a href="<?= base_url() ?>">Titipan Online Rumah Tahanan Samarinda</a>
+      	<a href="<?= base_url() ?>">Titipan Online Rumah Tahanan Kelas II A Samarinda</a>
       </span>
     </div>
   </div><!-- /.container-fluid -->

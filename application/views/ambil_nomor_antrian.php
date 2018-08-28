@@ -18,7 +18,7 @@
 		<tr>
 			<td>Nomor HP</td>
 			<td>
-				<input type="number" name="nomor_hp" value="<?= $nomor_hp ?>" required class='form-control'>
+				<input type="number" name="nomor_hp_alias" value="<?= $nomor_hp ?>" required class='form-control'>
 			</td>
 		</tr>
 		<tr>
