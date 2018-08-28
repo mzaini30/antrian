@@ -46,3 +46,11 @@ bagian pengikut ini dihapus semua aja
 | verifikasi_reload  | varchar(200) | NO   |     | NULL    |                |
 +--------------------+--------------+------+-----+---------+----------------+
 
+Hapus
+
+Identitas Pengikut (opsional) 	
+
+Nama 	
+No. KTP 	
+Foto Diri (gunakan format gambar) 	
+Foto KTP (gunakan format gambar) 	
