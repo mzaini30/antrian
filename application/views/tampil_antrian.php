@@ -18,8 +18,14 @@ $belum_verifikasi = 'tidak';
 <table class="table">
 	<tr>
 		<td width="250">
+			<p><strong>Foto Penitip</strong></p>
 			<span class="thumbnail">
-				<img src="<?= base_url() ?>gambar/foto_diri/<?= $foto_diri ?>" style="width: 250px; max-width: 100%;">
+				<img src="<?= base_url() ?>gambar/foto_penitip/<?= $foto_penitip ?>" style="width: 250px; max-width: 100%;">
+			</span>
+			<br>
+			<p><strong>Foto KTP Penitip</strong></p>
+			<span class="thumbnail">
+				<img src="<?= base_url() ?>gambar/foto_ktp_penitip/<?= $foto_ktp_penitip ?>" style="width: 250px; max-width: 100%;">
 			</span>
 		</td>
 		<?php if ($verifikasi == $belum_verifikasi){ ?>

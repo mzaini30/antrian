@@ -48,6 +48,8 @@ class User extends CI_Controller {
 		$foto_diri = $data_user[0]->foto_diri;
 		$nama_dibesuk = $data_user[0]->nama_dibesuk;
 		$foto_barang_titipan = $data_user[0]->foto_barang_titipan;
+		$foto_penitip = $data_user[0]->foto_penitip;
+		$foto_ktp_penitip = $data_user[0]->foto_ktp_penitip;
 		$pengikut_nama = $data_user[0]->pengikut_nama;
 		$pengikut_ktp = $data_user[0]->pengikut_ktp;
 		$pengikut_foto_diri = $data_user[0]->pengikut_foto_diri;
@@ -75,6 +77,8 @@ class User extends CI_Controller {
 			'foto_diri' => $foto_diri,
 			'nama_dibesuk' => $nama_dibesuk,
 			'foto_barang_titipan' => $foto_barang_titipan,
+			'foto_penitip' => $foto_penitip,
+			'foto_ktp_penitip' => $foto_ktp_penitip,
 			'pengikut_nama' => $pengikut_nama,
 			'pengikut_ktp' => $pengikut_ktp,
 			'pengikut_foto_diri' => $pengikut_foto_diri,
@@ -265,6 +269,8 @@ class User extends CI_Controller {
 		$nomor_hp_alias = $this->input->post('nomor_hp_alias');
 		$nama_dibesuk = $this->input->post('nama_dibesuk');
 		$foto_barang_titipan = '';
+		$foto_penitip = '';
+		$foto_ktp_penitip = '';
 		$pengikut_nama = $this->input->post('pengikut_nama');
 		$pengikut_ktp = $this->input->post('pengikut_ktp');
 		$surat_besukan = '';
@@ -305,6 +311,28 @@ class User extends CI_Controller {
 		));
 		if ($this->upload->do_upload('foto_barang_titipan')){
 			$foto_barang_titipan = $this->upload->data()['file_name'];
+		}
+
+		// upload foto penitip
+
+		$this->upload->initialize(array(
+			'upload_path' => './gambar/foto_penitip',
+			'allowed_types' => 'gif|jpg|png',
+			'encrypt_name' => TRUE
+		));
+		if ($this->upload->do_upload('foto_penitip')){
+			$foto_penitip = $this->upload->data()['file_name'];
+		}
+
+		// upload foto ktp penitip
+
+		$this->upload->initialize(array(
+			'upload_path' => './gambar/foto_ktp_penitip',
+			'allowed_types' => 'gif|jpg|png',
+			'encrypt_name' => TRUE
+		));
+		if ($this->upload->do_upload('foto_ktp_penitip')){
+			$foto_ktp_penitip = $this->upload->data()['file_name'];
 		}
 
 		// upload gambar pengikut
@@ -348,6 +376,8 @@ class User extends CI_Controller {
         	'nomor_hp_alias' => $nomor_hp_alias,
         	'nama_dibesuk' => $nama_dibesuk,
         	'foto_barang_titipan' => $foto_barang_titipan,
+        	'foto_penitip' => $foto_penitip,
+        	'foto_ktp_penitip' => $foto_ktp_penitip,
 			// 'foto_diri' => $foto_diri, // foto diri tiba-tiba hilang weh
         	'pengikut_nama' => $pengikut_nama,
         	'pengikut_ktp' => $pengikut_ktp,

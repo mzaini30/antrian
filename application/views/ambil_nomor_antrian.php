@@ -33,6 +33,18 @@
 				<input type="file" name="foto_barang_titipan" required>
 			</td>
 		</tr>
+		<tr>
+			<td>Foto Penitip</td>
+			<td>
+				<input type="file" name="foto_penitip" required>
+			</td>
+		</tr>
+		<tr>
+			<td>Foto KTP Penitip</td>
+			<td>
+				<input type="file" name="foto_ktp_penitip" required>
+			</td>
+		</tr>
 		<!-- <tr>
 			<td><strong>Identitas Pengikut</strong> (opsional)</td>
 			<td></td>
