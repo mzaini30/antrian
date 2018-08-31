@@ -1,1 +1,0 @@
-<div class="alert alert-danger">Maaf, antrian sudah penuh. Silahkan coba besok lagi</div>
